@@ -1,9 +1,5 @@
-;;;   Alt + F6 Insert Time and Sign   ;;; 
-
-; REPLACE BELOW WITH YOUR INITIALS ;
-    initial := "INITIALS_HERE"
-    
+    FileRead, initial, %A_ScriptDir%\initials.txt    
     !F6:: 
-      FormatTime, time, A_now, dddd-MMM-yy hh:mm tt
+      FormatTime, time, A_now, dd/MM/yyyy hh:mm tt
       Send %time% ~ %initial% : {Enter} 
     return
